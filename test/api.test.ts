@@ -9,15 +9,15 @@ describe('GET /api/v1', () => {
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, {
-        message: 'API - 👋🌎🌍🌏',
+        message: '/api/v1',
       }, done);
   });
 });
 
-describe('GET /api/v1/emojis', () => {
+describe('GET /api/v1/sample-controller', () => {
   it('responds with a json message', (done) => {
     request(app)
-      .get('/api/v1/emojis')
+      .get('/api/v1/sample-controller')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, ['😀', '😳', '🙄'], done);
